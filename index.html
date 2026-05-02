@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASED Academy Chess Championship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="hero">
+            <div class="logo-wrap">
+                <img src="ased-logo.jpeg" alt="ASED Academy logo" class="logo">
+            </div>
+            <p class="eyebrow">ASED Academy Presents</p>
+            <h1>ASED Academy Chess Championship</h1>
+            <p class="subtitle">Complete the form below to register for the championship.</p>
+        </header>
+
+        <section class="card form-card">
+            <h2>Registration Form</h2>
+
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter student name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" placeholder="Enter your age" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" id="occupation" placeholder="Enter your occupation" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="categorySelect">Category</label>
+                        <select id="categorySelect" required>
+                            <option value="">Select a category</option>
+                            <option value="Under-18">Under-18</option>
+                            <option value="Open for All">Open for All</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="schoolClub">School/Club</label>
+                        <input type="text" id="schoolClub" placeholder="Enter your school or club" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="upojilaSelect">Upojila</label>
+                        <select id="upojilaSelect" required>
+                            <option value="">Select your upojila</option>
+                            <option value="Sadar, Joypurhat">Sadar, Joypurhat</option>
+                            <option value="Panchbibi">Panchbibi</option>
+                            <option value="Kalai">Kalai</option>
+                            <option value="Khetlal">Khetlal</option>
+                            <option value="Akkelpur">Akkelpur</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submitButton">Submit Registration</button>
+                <div class="form-message" id="formMessage" role="status"></div>
+            </form>
+        </section>
+
+        <section class="card registrations-card">
+            <div class="section-heading">
+                <div>
+                    <h2>Registered Participants</h2>
+                    <p>Everyone can see this list after the site is connected to Google Sheets.</p>
+                </div>
+                <span class="count-pill" id="registrationCount">0 Registered</span>
+            </div>
+
+            <p class="empty-message" id="emptyMessage">No one has registered yet.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Age</th>
+                            <th>Category</th>
+                            <th>School/Club</th>
+                            <th>Email</th>
+                            <th>Upojila</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrationTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
